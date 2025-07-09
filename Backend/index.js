@@ -24,7 +24,10 @@ app.post('/generate-pdf', async (req, res) => {
         const compiledTemplate = handlebars.compile(templateHtml);
         const html = compiledTemplate(data);
 
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({
+            headless: true,
+            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        });
         const page = await browser.newPage();
         await page.setContent(html);
 
