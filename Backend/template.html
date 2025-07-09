@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Sale Deed Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            background-color: #f7f7f7;
+            padding: 50px;
+        }
+
+        .deed-container {
+            background-color: #fff;
+            padding: 40px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: justify;
+            color: #333;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 16px;
+            text-align: right;
+        }
+
+        .signature-line {
+            margin-top: 40px;
+            border-top: 1px solid #000;
+            width: 200px;
+            float: right;
+            text-align: center;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="deed-container">
+        <h1>Sale Deed</h1>
+        <p>
+            This <strong>Sale Deed</strong> is made on <span class="highlight">{{date}}</span> between
+            <span class="highlight">{{name}}</span>, S/o <span class="highlight">{{father_name}}</span>, for a property
+            measuring
+            <span class="highlight">{{property_size}}</span> sq.ft., which has been sold for a sum of
+            <span class="highlight">₹{{sale_amount}}</span>.
+        </p>
+
+    </div>
+</body>
+
+</html>
