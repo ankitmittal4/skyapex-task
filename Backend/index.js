@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 const PORT = process.env.PORT || 8000;
 
 app.get('/', (req, res) => {
-    res.send('PDF Generator Backend Running ✅');
+    res.send('Backend server is running');
 });
 
 const templateHtml = fs.readFileSync(path.join(__dirname, 'template.html'), 'utf8');
