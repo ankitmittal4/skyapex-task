@@ -26,10 +26,8 @@ app.post('/generate-pdf', async (req, res) => {
 
         const puppeteer = require('puppeteer');
 
-        process.env.PUPPETEER_CACHE_DIR = "/opt/render/.cache/puppeteer";
         const browser = await puppeteer.launch({
             headless: true,
-            executablePath: puppeteer.executablePath(),
             args: ['--no-sandbox', '--disable-setuid-sandbox']
         });
 
