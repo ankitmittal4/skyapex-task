@@ -1,11 +1,11 @@
-# 🧾 Sale Deed PDF Generator
+# Sale Deed PDF Generator
 
 This is a full-stack web application that generates a professional **Sale Deed PDF** from user-provided form data.  
 It uses **React** on the frontend and **Node.js + Express + Puppeteer** on the backend.
 
 ---
 
-## 📸 Features
+## Features
 
 - Fill out a sale deed form with:
   - Full Name
@@ -19,7 +19,7 @@ It uses **React** on the frontend and **Node.js + Express + Puppeteer** on the b
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -31,13 +31,12 @@ It uses **React** on the frontend and **Node.js + Express + Puppeteer** on the b
 
 - Node.js
 - Express.js
-- Handlebars (for templating)
 - Puppeteer (for PDF generation)
 
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### 1. Clone the Repo
 
