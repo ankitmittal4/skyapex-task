@@ -26,11 +26,11 @@ app.post('/generate-pdf', async (req, res) => {
 
         const puppeteer = require('puppeteer');
 
-        const browser = await puppeteer.launch({
-            headless: true,
-            args: ['--no-sandbox', '--disable-setuid-sandbox']
-        });
-
+        // const browser = await puppeteer.launch({
+        //     headless: true,
+        //     args: ['--no-sandbox', '--disable-setuid-sandbox']
+        // });
+        const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'], executablePath: '/usr/bin/google-chrome' });
         const page = await browser.newPage();
         await page.setContent(html);
 
