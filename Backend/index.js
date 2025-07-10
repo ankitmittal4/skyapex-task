@@ -26,17 +26,20 @@ app.post('/generate-pdf', async (req, res) => {
 
         const puppeteer = require('puppeteer');
 
-        // const browser = await puppeteer.launch({
-        //     headless: true,
-        //     args: ['--no-sandbox', '--disable-setuid-sandbox']
-        // });
-        // const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'], executablePath: '/usr/bin/google-chrome' });
         const browser = await puppeteer.launch({
             headless: true,
-            executablePath: puppeteer.executablePath(), // ✅ This works in v19+
-            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
         });
-        console.log('Using executable path:', executablePath);
+        // const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'], executablePath: '/usr/bin/google-chrome' });
+        // const executablePath = puppeteer.executablePath();
+
+        // console.log('Using executable path:', executablePath);
+        // const browser = await puppeteer.launch({
+        //     headless: true,
+        //     executablePath,
+        //     args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        // });
+
         const page = await browser.newPage();
         await page.setContent(html);
 
